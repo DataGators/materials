@@ -58,21 +58,18 @@ print(maximum) # Print the max
 print(minimum) # Print the min
 ```
 
-## 4. Plotting things with ggplot
+## 5. Creating functions in R
+
+This function will multiply whatever number is input by 5.
 
 ```r
-mpg
-View(mpg) # View the data
+multiply_by_five <- function(x) {
+  return (5 * x)
+}
 
-ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy))     # Create a simple plot
-
-#ggplot(data = <DATA>) +
-  #<GEOM_FUNCTION>(mapping = aes(<MAPPINGS>))
-
-# Adding color to the points
-ggplot(data = mpg) +
-  geom_point(mapping = aes(x = displ, y = hwy, color = class))
+print(multiply_by_five(3))
+print(multiply_by_five(5))
+print(multiply_by_five(9))
 ```
 
-Other ones to try are alpha, shape, and size. Just replace color with those terms.
+When you call on the function in the print statement, it will use the value that you put in the parameter spot and run through the function with that value.
